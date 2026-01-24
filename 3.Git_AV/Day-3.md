@@ -1,5 +1,3 @@
-- # 
-
 # Day 11 DevOps Course: Essential Git Commands (Workflow, Remotes, Clone vs Fork, Branching, Merge vs Rebase)
 
 ## Opening context (why Day 11, what’s covered)
