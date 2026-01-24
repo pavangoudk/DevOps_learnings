@@ -1,106 +1,220 @@
-## Software Development Life Cycle (SDLC) and DevOps: Day Two Overview
+- # DevOps Zero to Hero (Day 2): SDLC Basics + Where DevOps Fits
 
-### Overview 📘
-This video continues a DevOps learning series, focusing primarily on the **Software Development Life Cycle (SDLC)**—a critical, standardized process followed universally in the software industry. The speaker explains why understanding SDLC is fundamental for everyone working in IT, especially DevOps engineers, as it forms the backbone of software creation and delivery. The video breaks down the SDLC phases (planning, designing, building, testing, deployment), showing how each contributes to delivering a high-quality software product. It highlights the role of DevOps as an enabler of automation and efficiency enhancement in software building, testing, and deployment.
+## Opening + recap of Day 1
 
-### Summary of Core Knowledge Points ⏰
+# 
 
-- **(00:00–04:20) Introduction to SDLC and Its Importance**
-  - SDLC stands for Software Development Life Cycle and is a **standardized process used to design, develop, and test software**.
-  - All organizations—from startups to large multinationals—adhere to these standards to ensure consistent quality.
-  - The main goal of SDLC is to **deliver a high-quality product** by systematically following design, development, and testing phases.
-  - Without testing, the product quality suffers, emphasizing the necessity of this lifecycle.
+- Speaker thanks viewers for watching Day 1 (“Introduction of DevOps”).
+- Recommends watching Day 1 if not already; mentions the **DevOps Zero to Hero playlist** (Day 0, Day 1, etc.).
+- Quick recap of Day 1 topics:
+- What is DevOps
+- Why DevOps
+- How to introduce yourself in a DevOps interview
 
-- **(04:20–07:10) Real-World Example: Implementing SDLC at example.com**
-  - Using an example e-commerce company example.com, the presenter illustrates how SDLC plays out.
-  - The company decides to add a new kids catalog feature.
-  - This feature development follows a circular SDLC: starting from planning, then design, build, testing, deployment, and then back to planning for future features.
-  - This iterative cycle ensures continuous improvement and adapts to customer needs.
+## Why learn Software Development Life Cycle (SDLC)?
 
-- **(07:10–14:20) Detailed Breakdown of SDLC Phases**
-  - **Planning and Requirements Gathering**: Business analysts and product owners gather and analyze customer feedback to decide on product features—crucial for validating ideas before development.
-  - **Defining Requirements**: Documented in a Software Requirements Specification (SRS) document for clarity.
-  - **Design Phase**: Split into High-Level Design (HLD) and Low-Level Design (LLD).
-    - HLD defines system-wide scalability, high availability, and architecture decisions.
-    - LLD details function/module-level design, including specific technologies and API calls.
-    
-- **(14:20–20:00) Building, Testing, and Deployment: DevOps Focus Areas**
-  - **Building (Development Phase)**: Developers write code based on requirements and design and push it to a shared repository like Git.
-  - **Testing Phase**: Quality Engineers (QEs) rigorously test the software to ensure functionality and quality before release.
-  - **Deployment Phase**: The application is promoted to the production environment for customers.
-  - These three phases are where **DevOps engineers play a crucial role in automating** processes to improve speed and quality.
+# 
+- Today is **Day 2**: focus is **Software Development Life Cycle**.
+- Speaker says everyone should learn SDLC regardless of role:
+- developer, tester, DevOps, or any software/IT role
+- Introduces the acronym:
+- SDLC = **Software Development Life Cycle**
+- *“The software development life cycle in short is also called as SDLC.”*
+- Why it matters:
+- Organizations (startup, MNC, unicorn) follow **industry standards**.
+- Understanding these standards is necessary to work effectively in an organization.
 
-- **(20:00–24:40) DevOps Role in SDLC**
-  - DevOps engineers automate the building, testing, and deployment phases, reducing manual work and increasing delivery efficiency.
-  - Automation is directly proportional to organizational efficiency.
-  - Although DevOps may participate in other phases, their primary focus is on **automation-driven efficiency in software delivery**.
-  - Awareness of organizational fit is stressed; tools like Terraform might be popular but not always the right choice for every organization.
+## ### SDLC (Software Development Life Cycle)
 
-- **(24:40–26:05) Project Management Models and Agile Mention**
-  - Different project management models (Waterfall, Iterative, Agile) are noted.
-  - Agile methodology dominates, emphasizing short iterations (Sprints) where the SDLC cycle is repeated in small chunks to enable faster delivery.
-  - In-depth details about these models are deferred to later project management courses.
+# 
+- High-level definition:
+- *SDLC is “a set of standard that is followed in the software industry to design, develop and to test.”*
+- Speaker emphasizes the goal:
+- Deliver a **high-quality product**
+- Without testing: you may design + develop, but quality can’t be assured.
+- One-line summary (speaker framing):
+- SDLC is the process followed to **design, develop, and test** in order to deliver a **high-quality product**.
 
-### Key Terms and Definitions 📖
+## Example context used: “example.com” e-commerce feature
 
-- **Software Development Life Cycle (SDLC):** A structured process followed by software organizations to design, develop, test, and deploy software products efficiently and with quality.
-- **High-Level Design (HLD):** Architectural blueprint defining system-wide characteristics like scalability and availability.
-- **Low-Level Design (LLD):** Detailed, module- or function-level design describing exact implementation specifics.
-- **Software Requirements Specification (SRS):** A document listing detailed requirements gathered from stakeholders, serving as a foundation throughout development.
-- **DevOps Engineer:** An IT professional focused on automating and streamlining building, testing, and deployment to improve software delivery speed and quality.
-- **Agile Methodology:** A project management approach using iterative cycles or Sprints to create software features incrementally.
-- **Quality Engineers (QE):** Specialists responsible for systematically testing software to ensure it meets quality standards.
-- **Git:** A version control system used for tracking code changes and collaboration among developers.
-- **Terraform:** Infrastructure as Code tool; used as an example where its suitability depends on organizational context.
+# 
+- Uses a fictional org: **example.com** (can be thought of like Amazon/Flipkart).
+- Example feature request:
+- Add a **kids catalog** (site previously sold only men/women clothing).
+- Speaker says each feature follows the SDLC “cycle” end-to-end.
 
-### Reasoning Structure 🔍
+## SDLC phases (shown as a cycle)
 
-1. **Premise:** Organizations need a standard framework to produce quality software.
-2. **Reasoning:** SDLC provides a stepwise process—planning, defining, designing, building, testing, deployment—that ensures quality and customer satisfaction.
-3. **Conclusion:** SDLC is a necessary industry-accepted standard for software development applicable universally.
-4. **Premise:** Manual software development and deployment are inefficient and error-prone.
-5. **Reasoning:** DevOps engineers automate building, testing, and deployment phases.
-6. **Conclusion:** Automation enhances delivery speed, reduces errors, and increases organizational efficiency.
+# 
+Speaker lays out SDLC as a repeating loop for every new feature:
 
-### Examples ⚙️
+1. **Planning**
+2. **Design**
+3. **Building**
+4. **Testing**
+5. **Deploy**
 
-- **Example:** Adding a kids clothing catalog on example.com
-  - Represents a new feature development that goes through full SDLC.
-  - Initial research from customers determines feasibility—if customers are not interested, the idea is dropped early to save resources.
-  - Demonstrates practical use of planning, requirement gathering, design, and iterative development.
-  - Highlights real-world decision-making and collaboration between business owners, developers, testers, and DevOps.
+- Notes it’s drawn as a **circle** because the same process repeats for each new feature.
 
-### Error-prone Points ⚠️
+## Deep dive into phases (in the order presented)
 
-- **Confusing SDLC phases:** Learners may think DevOps engineers write code or test manually; actually, DevOps focuses on **automating** these processes, not doing the primary development or testing.
-- **Misinterpreting roles:** Planning, defining, and designing phases primarily involve business analysts, architects, and senior developers—not DevOps engineers directly.
-- **Assuming universal tool applicability:** Popular tools (e.g., Terraform) are not a one-size-fits-all solution. DevOps engineers must evaluate tool fit for their specific organizational environment.
-- **Skipping testing importance:** Skipping testing leads to poor quality products; it is a mandatory phase for customer satisfaction.
+### 1) Planning + Requirements
 
-### Quick Review Tips / Self-Test Exercises 📝
+# 
 
-**Tips (No Answers):**
-- Define the main goal of the SDLC.
-- Name the three core phases of SDLC where DevOps plays a crucial role.
-- Explain the difference between High-Level Design and Low-Level Design.
-- Why is planning and requirements gathering considered a critical phase?
-- What role does automation have in DevOps within SDLC?
+- Called out as a “fundamental” starting stage.
+- Owned by roles like:
+- product owner, business analyst, and sometimes senior members
+- What happens here:
+- Gather customer feedback and validate demand.
+- If customers aren’t interested (kids catalog example), you can **stop the idea early**.
+- Requirements detail example:
+- Determine which age ranges customers want (e.g., 6–12 vs 1–4).
+- Quantify interest (speaker uses “10 customers today” and “15–20 potential customers” as an illustration).
+- Output of this stage:
+- Consolidated requirements (“collective information”).
 
-**Exercises (With Answers):**
-1. **Q:** What does SDLC stand for and what is its main purpose?  
-   **A:** Software Development Life Cycle; its purpose is to provide a systematic approach to design, develop, test, and deliver high-quality software.
+### 2) Defining requirements (documentation)
 
-2. **Q:** Which SDLC phases are primarily automated by a DevOps engineer?  
-   **A:** Building (development), testing, and deployment phases.
+# 
+- After planning/research, requirements are documented.
+- Document named:
+- **Software Requirement Specification (SRS)** document
+- What it contains (as described):
+- Data collected during planning (customer research results, preferences, etc.).
 
-3. **Q:** What document records the detailed software requirements gathered during the planning phase?  
-   **A:** Software Requirements Specification (SRS) document.
+### 3) Designing (HLD and LLD)
 
-4. **Q:** How does Agile methodology modify the traditional SDLC process?  
-   **A:** It breaks the SDLC into short iterative cycles called Sprints to enable incremental delivery.
+# 
+- Speaker calls design a “very critical phase.”
+- Two design levels:
+- **High Level Design (HLD)**
+- **Low Level Design (LLD)**
 
-5. **Q:** Why must DevOps engineers assess tool suitability for their organization?  
-   **A:** Because tools popular in the community may not fit all organizational needs or infrastructure.
+#### High Level Design (HLD)
 
-### Summary and Review 🔄
-This session establishes the **Software Development Life Cycle (SDLC)** as the backbone of software creation across all IT organizations. It emphasizes that **planning, designing, building, testing, and deployment** are systematic phases followed to ensure product quality and customer satisfaction. The video clarifies that while all team members collaborate across phases, the **DevOps engineer’s key responsibility is automating the building, testing, and deployment processes** to speed up delivery and reduce errors. Understanding SDLC fundamentals and DevOps’ role within them is essential to improving organizational efficiency and working effectively in modern software environments. Agile methodology is the prevalent project management approach that wraps this lifecycle in iterative cycles, enabling faster and more responsive software development.
+# 
+- Created by: architect, team lead, or senior resource.
+- Focus areas described:
+- scalability (e.g., higher load during Christmas)
+- high availability
+- broad architecture choices (e.g., database choice, number of replicas)
+
+#### Low Level Design (LLD)
+
+# 
+- Created by: architect or senior development members.
+- Focus areas described:
+- detailed module/function-level design
+- language-level implementation guidance (speaker mentions Java/Python as examples)
+- specifics like database calls and function behavior (inputs/arguments and responses)
+
+## Where DevOps becomes “most important” in SDLC (speaker’s focus)
+
+# 
+- Speaker transitions: DevOps can be involved earlier “out of interest,” but the “actual importance” is strongest in:
+- **Building**
+- **Testing**
+- **Deployment**
+- Key point:
+- *DevOps engineers “automate these processes.”*
+- Clarification:
+- Not saying DevOps shouldn’t be involved in planning/definition/design—but primary focus is the last three stages.
+
+## The last three phases explained (and mapped to roles)
+
+### 4) Building (Developing)
+
+# 
+
+- Speaker equates building with development:
+- *“Building is nothing but developing.”*
+- Inputs to developers:
+- design documents + requirements + “stories” (mentioned)
+- Developer workflow described:
+- Write code in the organization’s language
+- Read items from **Jira** and/or prepared documents
+- Get code reviewed by peers
+- Push code to a shared source code repository
+
+### ### Jira (mentioned as developer input)
+
+# 
+- Developers “read the Jira items” before writing code.
+
+### ### Git (source code repository concept)
+
+# 
+- Speaker notes most orgs use **Git**.
+- For this lesson, Git is framed simply as:
+- a repository that stores and shares code across the team (centralized/distributed mentioned)
+- Reason it’s needed:
+- Code can’t remain only on one developer’s laptop; it must be shared.
+
+### 5) Testing
+
+# 
+- Reason for testing:
+- “Works on my server” isn’t trusted as final proof.
+- Need “prompt and quality code” for customers.
+- Testing flow described:
+- Code from Git repo is deployed to a server
+- A testing team validates it
+
+### ### QE (Quality Assurance Engineers)
+
+# 
+- QE team is defined:
+- *“QE team… they are the quality assurance engineers.”*
+- Role mapping:
+- Developers build; QE tests.
+
+### 6) Deployment
+
+# 
+- Deployment described as:
+- promoting the application to **production**
+- Environment progression example:
+- testing occurs on a server like staging/development
+- final delivery is to production where customers receive it
+
+## How DevOps fits into SDLC (efficiency + automation)
+
+# 
+- Speaker answers: “Where is DevOps coming into picture?”
+- DevOps purpose here:
+- “fastens the process” and improves delivery speed
+- Core mechanism:
+- *DevOps engineer “would automate the process… everything happens in an automated way.”*
+- Speaker explicitly frames DevOps responsibility as:
+- automating **building, testing, and deployment**
+- reducing time by “avoiding manual intervention”
+- Clarifies DevOps is not manually doing each task:
+- DevOps doesn’t personally build/test/deploy each release
+- DevOps writes automation/scripts so the flow happens automatically
+
+## SDLC + project management models (high level mention)
+
+# 
+- Speaker notes SDLC can be executed under different models:
+- **Waterfall**, **Iterative**, **Agile**
+- Emphasis:
+- “Most organizations these days” use **Agile**
+- Agile described at a high level:
+- You don’t wait for all planning/design to finish for everything
+- You work in “short sprints” and repeat the SDLC loop in smaller chunks
+- Speaker says deeper coverage will come later in project management classes.
+
+## Interview framing (what to say as a DevOps engineer)
+
+# 
+- If asked about SDLC pillars and DevOps focus:
+- SDLC includes planning, design, build, test, deploy
+- As DevOps: focus on “automating and improving the efficiency of building, testing, and deployment”
+
+## Closing
+
+# 
+- SDLC is presented as an industry-wide standard whether on cloud or on-prem.
+- Invites questions in comments or via LinkedIn.
+- Asks viewers to share the free course with others, like the video, and subscribe.
