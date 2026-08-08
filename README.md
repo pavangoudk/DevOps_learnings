@@ -25,7 +25,7 @@ Example:
 appuser   12345  1  0 10:20 ?  00:00:05 java -jar orders-api.jar
 
 Important information:
-
+```
 12345
   ↓
 PID (Process ID)
@@ -37,7 +37,7 @@ Is the application process running?
        ps
 
 If the process is not running, investigate:
-
+```
 - Application startup failure
 - Configuration error
 - Missing dependency
@@ -56,7 +56,7 @@ A port identifies a network service endpoint on a machine.
 A socket represents the communication endpoint used by the operating system.
 
 For a server application:
-
+```
 Application
      ↓
 OS / Kernel
@@ -66,7 +66,7 @@ Socket
 Port
      ↓
 LISTEN
-
+```
 ---
 
 3. TCP
@@ -76,7 +76,7 @@ TCP = Transmission Control Protocol
 TCP provides a reliable communication channel between two endpoints.
 
 For a server:
-
+```
 Application
     ↓
 Creates/binds socket
@@ -104,7 +104,7 @@ TCP
 IP
   ↓
 Network
-
+```
 ---
 
 4. Checking Listening Ports
@@ -134,7 +134,7 @@ Port        → 8080
 Address     → 0.0.0.0
 
 Troubleshooting question
-
+```
 «Is the application listening on the expected TCP port?»
 
 If there is no listening socket on the expected port:
@@ -146,7 +146,7 @@ BUT
 Application may not have successfully bound/listened
         ↓
 Investigate application configuration/startup
-
+```
 ---
 
 5. "127.0.0.1" vs "0.0.0.0"
@@ -188,7 +188,7 @@ For HTTP troubleshooting:
 curl http://localhost:8080/orders
 
 The important difference:
-
+```
 ps
  ↓
 Checks process
@@ -200,9 +200,9 @@ Checks listening socket
 curl
  ↓
 Actually sends an HTTP request
-
+```
 Mental model
-
+```
 Process?
    ↓
   ps
@@ -214,7 +214,7 @@ Listening?
 Can I communicate with the application using HTTP?
    ↓
   curl
-
+```
 ---
 
 7. HTTP
@@ -224,7 +224,7 @@ HTTP = HyperText Transfer Protocol
 HTTP defines how a client and server communicate using requests and responses.
 
 Basic flow:
-
+```
 CLIENT
    │
    │ HTTP REQUEST
@@ -234,19 +234,19 @@ SERVER / APPLICATION
    │ HTTP RESPONSE
    ▼
 CLIENT
-
+```
 ---
 
 8. HTTP Request
 
 An HTTP request contains:
-
+```
 HTTP Request
 │
 ├── Request line
 ├── Headers
 └── Body
-
+```
 The request line contains:
 
 METHOD /path HTTP-version
@@ -258,7 +258,7 @@ GET /orders HTTP/1.1
 ---
 
 9. HTTP Methods
-
+```
 GET
 
 Retrieve data.
@@ -288,15 +288,15 @@ DELETE
 Delete a resource.
 
 DELETE /orders/123
-
+```
 Mental model:
-
+```
 GET     → Read
 POST    → Create/Submit
 PUT     → Replace/Update
 PATCH   → Partial update
 DELETE  → Delete
-
+```
 ---
 
 10. URL Structure
@@ -306,7 +306,7 @@ Example:
 https://api.company.com:443/orders/123?status=active&limit=10
 
 Breakdown:
-
+```
 https://
    ↓
 Scheme
@@ -338,7 +338,7 @@ Query parameters
 /orders?status=active&limit=10
 
 Usually provide filtering/options for the request.
-
+```
 ---
 
 11. HTTP Headers
@@ -348,19 +348,19 @@ Headers provide additional information about an HTTP request or response.
 Request headers
 
 Example:
-
+```
 Host: orders.company.com
 Authorization: Bearer <token>
 Content-Type: application/json
 Accept: application/json
-
+```
 Response headers
 
 Example:
-
+```
 Content-Type: application/json
 Content-Length: 250
-
+```
 Important distinction
 
 Request headers
@@ -433,7 +433,7 @@ What do I want to receive?
 The body contains data sent by the client.
 
 Example:
-
+```
 POST /orders HTTP/1.1
 Content-Type: application/json
 
@@ -448,7 +448,7 @@ The body:
   "product": "Laptop",
   "quantity": 1
 }
-
+```
 The "Content-Type" tells the application how to interpret the body.
 
 ---
@@ -456,13 +456,13 @@ The "Content-Type" tells the application how to interpret the body.
 14. Sending an HTTP Body with curl
 
 Example:
-
+```
 curl -X POST http://localhost:8080/orders \
   -H "Content-Type: application/json" \
   -d '{"product":"Laptop","quantity":1}'
-
+```
 Meaning:
-
+```
 -X POST
    ↓
 HTTP method
@@ -478,7 +478,7 @@ Body format
 -d
    ↓
 Data/body
-
+```
 ---
 
 15. HTTP Response
@@ -486,22 +486,22 @@ Data/body
 The server sends an HTTP response back to the client.
 
 Example:
-
+```
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
   "orders": [...]
 }
-
+```
 An HTTP response contains:
-
+```
 HTTP Response
 │
 ├── Status line
 ├── Response headers
 └── Response body
-
+```
 The status line:
 
 HTTP/1.1 200 OK
@@ -517,7 +517,7 @@ Reason phrase → OK
 16. HTTP Status Codes Learned
 
 We have started building the mental model around HTTP status codes.
-
+```
 200
 
 200 OK
@@ -567,7 +567,7 @@ A gateway/proxy received an invalid response from an upstream service.
 504 Gateway Timeout
 
 A gateway/proxy waited too long for an upstream response.
-
+```
 «We will study all major status codes properly in a separate HTTP troubleshooting module.»
 
 ---
@@ -585,7 +585,7 @@ Start with:
 «"Which layer do I need to prove?"»
 
 Basic troubleshooting flow:
-
+```
 Application not working
         │
         ▼
@@ -611,13 +611,13 @@ What HTTP response did I receive?
         │
         ▼
 Investigate the appropriate layer
-
+```
 ---
 
 18. End-to-End Mental Model
 
 The complete model we built today:
-
+```
                     CLIENT
                        │
                        │
@@ -657,7 +657,7 @@ The complete model we built today:
         │        │         │
      Status    Headers    Body
       Code
-
+```
 ---
 
 19. Commands Learned
